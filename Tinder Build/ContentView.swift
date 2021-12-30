@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var appManager: AppStateManager = AppStateManager()
+    
     var body: some View {
-        Text("SwiftUI3 Tinder Build")
-            .padding()
+        MainView()
+            .environmentObject(appManager)
     }
 }
 
