@@ -11,6 +11,8 @@
 		91F3751A277E46B9006C970F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37519277E46B9006C970F /* ContentView.swift */; };
 		91F3751C277E46BA006C970F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3751B277E46BA006C970F /* Assets.xcassets */; };
 		91F3751F277E46BA006C970F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3751E277E46BA006C970F /* Preview Assets.xcassets */; };
+		91F37526277E4851006C970F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37525277E4851006C970F /* MainView.swift */; };
+		91F37528277E49B3006C970F /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37527277E49B3006C970F /* TabBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		91F37519277E46B9006C970F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		91F3751B277E46BA006C970F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91F3751E277E46BA006C970F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91F37525277E4851006C970F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		91F37527277E49B3006C970F /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				91F37517277E46B9006C970F /* Tinder_BuildApp.swift */,
 				91F37519277E46B9006C970F /* ContentView.swift */,
+				91F37525277E4851006C970F /* MainView.swift */,
+				91F37527277E49B3006C970F /* TabBarButton.swift */,
 				91F3751B277E46BA006C970F /* Assets.xcassets */,
 				91F3751D277E46BA006C970F /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F3751A277E46B9006C970F /* ContentView.swift in Sources */,
+				91F37528277E49B3006C970F /* TabBarButton.swift in Sources */,
+				91F37526277E4851006C970F /* MainView.swift in Sources */,
 				91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
