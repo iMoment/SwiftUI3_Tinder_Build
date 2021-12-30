@@ -30,78 +30,57 @@ struct ProfileView: View {
             Spacer()
                 .frame(height: 18)
             
-            Text("Stanley, 33")
-                .foregroundColor(.textTitle)
-                .font(.system(size: 26, weight: .medium))
-            
-            Spacer()
-                .frame(height: 8)
-            
-            Text("iOS Developer")
-            
-            Spacer()
-                .frame(height: 22)
-            
-            HStack(alignment: .top) {
-                Spacer()
-                
-                Button(action: { }, label: {
-                    VStack {
-                        Image(systemName: "gearshape.fill")
-                            .foregroundColor(Color.gray.opacity(0.5))
-                            .font(.system(size: 30))
-                            .padding(10)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 6)
-                        
-                        Text("SETTINGS")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.textSecondary)
-                    }
-                })
+            // MARK: Name + Job Title
+            Group {
+                Text("Stanley, 33")
+                    .foregroundColor(.textTitle)
+                    .font(.system(size: 26, weight: .medium))
                 
                 Spacer()
+                    .frame(height: 8)
                 
-                Button(action: { }, label: {
-                    VStack {
-                        Image(systemName: "camera.fill")
-                            .foregroundColor(Color.white)
-                            .font(.system(size: 38))
-                            .padding(22)
-                            .background(Color.red)
-                            .clipShape(Circle())
-                            .shadow(radius: 6)
-                        
-                        Text("ADD MEDIA")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.textSecondary)
-                    }
-                })
+                Text("iOS Developer")
                 
                 Spacer()
-                
-                Button(action: { }, label: {
-                    VStack {
-                        Image(systemName: "shield.fill")
-                            .foregroundColor(Color.gray.opacity(0.5))
-                            .font(.system(size: 30))
-                            .padding(10)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 6)
-                        
-                        Text("SAFETY")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.textSecondary)
-                    }
-                })
-                
-                Spacer()
+                    .frame(height: 22)
             }
             
+            ProfileButtonArray()
+            
             Spacer()
+                .frame(height: 14)
+            
+            HStack {
+                Text("Photo Tip: Make waves with a beach photo and get more likes")
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(3)
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 14))
+                
+                Button(action: { }, label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 12, weight: .heavy))
+                        .foregroundColor(Color.pink)
+                        .padding(6)
+                })
+                .background(Color.white)
+                .clipShape(Circle())
+            }
+            .padding()
+            .background(Color.pink)
+            .cornerRadius(12)
+            .padding(.horizontal, 8)
+            
+            ZStack {
+                Color.gray.opacity(0.14)
+                
+                ProfilePromo {
+                    // TODO: Action
+                }
+            }
+            .padding(.top, 18)
         }
+        .foregroundColor(Color.black.opacity(0.75))
     }
 }
 
@@ -109,5 +88,67 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
             .background(Color.defaultBackground)
+    }
+}
+
+struct ProfileButtonArray: View {
+    var body: some View {
+        HStack(alignment: .top) {
+            Spacer()
+            
+            Button(action: { }, label: {
+                VStack {
+                    Image(systemName: "gearshape.fill")
+                        .foregroundColor(Color.gray.opacity(0.5))
+                        .font(.system(size: 30))
+                        .padding(10)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(radius: 6)
+                    
+                    Text("SETTINGS")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(.textSecondary)
+                }
+            })
+            
+            Spacer()
+            
+            Button(action: { }, label: {
+                VStack {
+                    Image(systemName: "camera.fill")
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 38))
+                        .padding(22)
+                        .background(Color.red)
+                        .clipShape(Circle())
+                        .shadow(radius: 6)
+                    
+                    Text("ADD MEDIA")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(.textSecondary)
+                }
+            })
+            
+            Spacer()
+            
+            Button(action: { }, label: {
+                VStack {
+                    Image(systemName: "shield.fill")
+                        .foregroundColor(Color.gray.opacity(0.5))
+                        .font(.system(size: 30))
+                        .padding(10)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(radius: 6)
+                    
+                    Text("SAFETY")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(.textSecondary)
+                }
+            })
+            
+            Spacer()
+        }
     }
 }

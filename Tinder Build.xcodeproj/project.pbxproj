@@ -18,6 +18,7 @@
 		91F37533277E5C6B006C970F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37532277E5C6B006C970F /* ProfileView.swift */; };
 		91F37535277E5DCE006C970F /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37534277E5DCE006C970F /* RoundedImage.swift */; };
 		91F37538277E5E2E006C970F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 91F37537277E5E2E006C970F /* Kingfisher */; };
+		91F3753A277E6FB3006C970F /* ProfilePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37539277E6FB3006C970F /* ProfilePromo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		91F3752B277E515E006C970F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91F37532277E5C6B006C970F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		91F37534277E5DCE006C970F /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		91F37539277E6FB3006C970F /* ProfilePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePromo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				91F37532277E5C6B006C970F /* ProfileView.swift */,
+				91F37539277E6FB3006C970F /* ProfilePromo.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				91F3751A277E46B9006C970F /* ContentView.swift in Sources */,
 				91F37535277E5DCE006C970F /* RoundedImage.swift in Sources */,
 				91F3752C277E515E006C970F /* Extensions.swift in Sources */,
+				91F3753A277E6FB3006C970F /* ProfilePromo.swift in Sources */,
 				91F37528277E49B3006C970F /* TabBarButton.swift in Sources */,
 				91F37526277E4851006C970F /* MainView.swift in Sources */,
 				91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */,
