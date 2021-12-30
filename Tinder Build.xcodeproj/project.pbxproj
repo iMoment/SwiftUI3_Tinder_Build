@@ -15,6 +15,9 @@
 		91F37528277E49B3006C970F /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37527277E49B3006C970F /* TabBarButton.swift */; };
 		91F3752A277E4D51006C970F /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37529277E4D51006C970F /* AppStateManager.swift */; };
 		91F3752C277E515E006C970F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3752B277E515E006C970F /* Extensions.swift */; };
+		91F37533277E5C6B006C970F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37532277E5C6B006C970F /* ProfileView.swift */; };
+		91F37535277E5DCE006C970F /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37534277E5DCE006C970F /* RoundedImage.swift */; };
+		91F37538277E5E2E006C970F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 91F37537277E5E2E006C970F /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,8 @@
 		91F37527277E49B3006C970F /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		91F37529277E4D51006C970F /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
 		91F3752B277E515E006C970F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		91F37532277E5C6B006C970F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		91F37534277E5DCE006C970F /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F37538277E5E2E006C970F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 				91F37517277E46B9006C970F /* Tinder_BuildApp.swift */,
 				91F37519277E46B9006C970F /* ContentView.swift */,
 				91F37530277E5909006C970F /* Home */,
+				91F37531277E5C58006C970F /* Profile */,
 				91F3752F277E58F0006C970F /* Model */,
 				91F3752E277E53BC006C970F /* Components */,
 				91F3752D277E53A4006C970F /* Helpers */,
@@ -91,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				91F37527277E49B3006C970F /* TabBarButton.swift */,
+				91F37534277E5DCE006C970F /* RoundedImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -111,6 +119,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		91F37531277E5C58006C970F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				91F37532277E5C6B006C970F /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +143,9 @@
 			dependencies = (
 			);
 			name = "Tinder Build";
+			packageProductDependencies = (
+				91F37537277E5E2E006C970F /* Kingfisher */,
+			);
 			productName = "Tinder Build";
 			productReference = 91F37514277E46B9006C970F /* Tinder Build.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 91F3750B277E46B9006C970F;
+			packageReferences = (
+				91F37536277E5E2E006C970F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 91F37515277E46B9006C970F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,10 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F3751A277E46B9006C970F /* ContentView.swift in Sources */,
+				91F37535277E5DCE006C970F /* RoundedImage.swift in Sources */,
 				91F3752C277E515E006C970F /* Extensions.swift in Sources */,
 				91F37528277E49B3006C970F /* TabBarButton.swift in Sources */,
 				91F37526277E4851006C970F /* MainView.swift in Sources */,
 				91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */,
+				91F37533277E5C6B006C970F /* ProfileView.swift in Sources */,
 				91F3752A277E4D51006C970F /* AppStateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91F37536277E5E2E006C970F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91F37537277E5E2E006C970F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91F37536277E5E2E006C970F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91F3750C277E46B9006C970F /* Project object */;
 }
