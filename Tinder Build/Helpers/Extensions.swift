@@ -24,3 +24,14 @@ extension Color {
     static let defaultBackground = Color(.systemGray6).opacity(0.35)
     static let textFieldBackground = Color(.systemGray6)
 }
+
+extension View {
+    func endEditing(_ force: Bool) {
+        UIApplication.shared.windows.forEach { $0.endEditing(force) }
+        
+//        // iOS 15
+//        let scenes = UIApplication.shared.connectedScenes
+//        let windowScene = scenes.first as? UIWindowScene
+//        windowScene?.windows.forEach { $0.endEditing(force) }
+    }
+}

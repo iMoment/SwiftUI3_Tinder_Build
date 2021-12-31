@@ -31,7 +31,7 @@ struct ChatView: View {
                             ForEach(chatManager.messages.indices) { messageIndex in
                                 let message = chatManager.messages[messageIndex]
                                 withAnimation(Animation.easeIn) {
-                                    MessagesView(message: message)
+                                    MessageBubble(message: message)
                                         .id(messageIndex)
                                         .transition(.move(edge: .trailing))
                                 }
