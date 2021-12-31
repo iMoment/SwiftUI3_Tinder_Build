@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MessageView: View {
+struct MessagesView: View {
     var message: Message
     
     var body: some View {
@@ -30,8 +30,8 @@ struct MessageView: View {
     }
 }
 
-struct MessageView_Previews: PreviewProvider {
+struct MessagesView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(message: Message.exampleSent)
+        MessagesView(message: Message.exampleSent)
     }
 }
