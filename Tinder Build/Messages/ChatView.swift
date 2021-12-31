@@ -10,6 +10,7 @@ import SwiftUI
 struct ChatView: View {
     @ObservedObject var chatManager: ChatManager
     @State private var typingMessage: String = ""
+    @State private var scrollProxy: ScrollViewProxy? = nil
     private var person: Person
     
     init(person: Person) {
@@ -24,14 +25,21 @@ struct ChatView: View {
                     .frame(height: 60)
                 
                 ScrollView(.vertical, showsIndicators: false, content: {
-                    LazyVStack {
-                        ForEach(chatManager.messages.indices) { messageIndex in
-                            let message = chatManager.messages[messageIndex]
-                            withAnimation(Animation.easeIn) {
-                                MessagesView(message: message)
-                                    .transition(.move(edge: .trailing))
+                    ScrollViewReader { proxy in
+                        
+                        LazyVStack {
+                            ForEach(chatManager.messages.indices) { messageIndex in
+                                let message = chatManager.messages[messageIndex]
+                                withAnimation(Animation.easeIn) {
+                                    MessagesView(message: message)
+                                        .id(messageIndex)
+                                        .transition(.move(edge: .trailing))
+                                }
                             }
                         }
+                        .onAppear(perform: {
+                            scrollProxy = proxy
+                        })
                     }
                 })
                 
@@ -42,7 +50,7 @@ struct ChatView: View {
                         .foregroundColor(Color.textPrimary)
                         .textFieldStyle(PlainTextFieldStyle())
                         .frame(height: 45)
-                    .padding(.horizontal)
+                        .padding(.horizontal)
                     
                     Button(action: { sendMessage() }, label: {
                         Text("Send")
@@ -68,11 +76,25 @@ struct ChatView: View {
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .onChange(of: chatManager.keyboardIsShowing, perform: { value in
+            if value {
+                scrollToBottom()
+            }
+        })
+        .onChange(of: chatManager.messages, perform: { _ in
+            scrollToBottom()
+        })
     }
     
     func sendMessage() {
         chatManager.sendMessage(Message(messageContent: typingMessage))
         typingMessage = ""
+    }
+    
+    func scrollToBottom() {
+        withAnimation {
+            scrollProxy?.scrollTo(chatManager.messages.count - 1, anchor: .bottom)
+        }
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Message {
+struct Message: Hashable {
     var messageContent: String
     var person: Person? = nil
     
