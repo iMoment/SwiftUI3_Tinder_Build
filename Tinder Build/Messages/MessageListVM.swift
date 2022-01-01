@@ -16,6 +16,6 @@ class MessageListVM: ObservableObject {
     
     func loadThreads() {
         // Handle networking to load messageThreads from a server
-        self.messageThreads = [MessageThread.example]
+        self.messageThreads = MessageThread.examples
     }
 }

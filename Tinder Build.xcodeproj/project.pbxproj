@@ -12,6 +12,7 @@
 		91A603BB277F548200B41F27 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BA277F548200B41F27 /* ChatView.swift */; };
 		91A603BD277F54CC00B41F27 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BC277F54CC00B41F27 /* ChatManager.swift */; };
 		91A603BF277F584900B41F27 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BE277F584900B41F27 /* ChatViewHeader.swift */; };
+		91BA7D302780B13300EC3901 /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BA7D2F2780B13300EC3901 /* MessageRow.swift */; };
 		91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37517277E46B9006C970F /* Tinder_BuildApp.swift */; };
 		91F3751A277E46B9006C970F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37519277E46B9006C970F /* ContentView.swift */; };
 		91F3751C277E46BA006C970F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3751B277E46BA006C970F /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		91A603BA277F548200B41F27 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		91A603BC277F54CC00B41F27 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		91A603BE277F584900B41F27 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
+		91BA7D2F2780B13300EC3901 /* MessageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
 		91F37514277E46B9006C970F /* Tinder Build.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder Build.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F37517277E46B9006C970F /* Tinder_BuildApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tinder_BuildApp.swift; sourceTree = "<group>"; };
 		91F37519277E46B9006C970F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				91A603BE277F584900B41F27 /* ChatViewHeader.swift */,
 				9109952E277FC8E000CC1F80 /* MessageListView.swift */,
 				91099530277FC90B00CC1F80 /* MessageListVM.swift */,
+				91BA7D2F2780B13300EC3901 /* MessageRow.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				91F3753D277E76AA006C970F /* Message.swift in Sources */,
 				91F37533277E5C6B006C970F /* ProfileView.swift in Sources */,
 				91F3752A277E4D51006C970F /* AppStateManager.swift in Sources */,
+				91BA7D302780B13300EC3901 /* MessageRow.swift in Sources */,
 				91F37541277E7D36006C970F /* MessageThread.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

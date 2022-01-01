@@ -13,50 +13,69 @@ struct MessageListView: View {
     @State private var isEditing: Bool = false
     
     var body: some View {
-        VStack {
-            HStack {
-                TextField("Search Matches", text: $searchText)
-                    .padding(7)
-                    .padding(.horizontal, 25)
-                    .background(Color.textFieldBackground)
-                    .cornerRadius(8)
-                    .overlay(
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.textPrimary)
-                                .font(.system(size: 20, weight: .bold))
-                                .padding(.leading, 4)
-                            
-                            Spacer()
-                        }
-                    )
-                    .padding(.horizontal, 10)
-                    .onTapGesture(perform: {
-                        self.isEditing = true
-                    })
-                    .animation(.easeIn(duration: 0.25))
-                
-                if isEditing {
-                    Button(action: {
-                        self.isEditing = false
-                        self.searchText = ""
-                        self.endEditing(true)
-                    }, label: {
-                        Text("Cancel")
-                    })
-                    .padding(.trailing, 10)
-                    .transition(.move(edge: .trailing))
-                    .animation(.easeIn(duration: 0.25))
+        ScrollView {
+            VStack {
+                HStack {
+                    TextField("Search Matches", text: $searchText)
+                        .padding(7)
+                        .padding(.horizontal, 25)
+                        .background(Color.textFieldBackground)
+                        .cornerRadius(8)
+                        .overlay(
+                            HStack {
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundColor(.textPrimary)
+                                    .font(.system(size: 20, weight: .bold))
+                                    .padding(.leading, 4)
+                                
+                                Spacer()
+                            }
+                        )
+                        .padding(.horizontal, 10)
+                        .onTapGesture(perform: {
+                            self.isEditing = true
+                        })
+                        .animation(.easeIn(duration: 0.25))
+                    
+                    if isEditing {
+                        Button(action: {
+                            self.isEditing = false
+                            self.searchText = ""
+                            self.endEditing(true)
+                        }, label: {
+                            Text("Cancel")
+                        })
+                        .padding(.trailing, 10)
+                        .transition(.move(edge: .trailing))
+                        .animation(.easeIn(duration: 0.25))
+                    }
                 }
+                
+                Spacer()
+                    .frame(height: 14)
+                
+                VStack {
+                    ForEach(vm.messageThreads, id: \.self) { thread in
+                        NavigationLink(
+                            destination: ChatView(person: thread.person),
+                            label: {
+                                MessageRow(messageThread: thread)
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                    }
+                }
+                
+                Spacer()
             }
-            
-            Spacer()
         }
+        .modifier(HideNavigationView())
     }
 }
 
 struct MessageListView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageListView()
+        NavigationView {
+            MessageListView()
+        }
     }
 }

@@ -7,11 +7,16 @@
 
 import Foundation
 
-struct MessageThread {
+struct MessageThread: Hashable {
     var person: Person
     var lastMessage: String
 }
 
 extension MessageThread {
-    static let example = MessageThread(person: Person.example, lastMessage: "Hello, my name is Sanghwa.")
+    static let example = MessageThread(person: Person.example, lastMessage: "Hello, my name is Sanghwa. Happy New Year! How are you doing today?")
+    
+    static let examples: [MessageThread] = [
+        MessageThread(person: Person.example, lastMessage: "Hello, my name is Sanghwa. Happy New Year! How are you doing today?"),
+        MessageThread(person: Person.example2, lastMessage: "Hi there.")
+    ]
 }

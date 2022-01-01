@@ -74,8 +74,7 @@ struct ChatView: View {
                     // TODO: Video Action
                 }
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
+        .modifier(HideNavigationView())
         .onChange(of: chatManager.keyboardIsShowing, perform: { value in
             if value {
                 scrollToBottom()
