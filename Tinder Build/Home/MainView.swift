@@ -19,7 +19,7 @@ struct MainView: View {
             let view = Text("Premium View")
             return AnyView(view)
         case .messages:
-            let view = Text("Messages View")
+            let view = MessageListView()
             return AnyView(view)
         case .profile:
             let view = ProfileView()
@@ -28,39 +28,42 @@ struct MainView: View {
     }
     
     var body: some View {
-        ZStack {
-            Color(.systemGray6)
-                .opacity(0.35)
-                .edgesIgnoringSafeArea(.vertical)
-            
-            VStack {
-                HStack {
-                    Spacer()
+        NavigationView {
+            ZStack {
+                Color(.systemGray6)
+                    .opacity(0.35)
+                    .edgesIgnoringSafeArea(.vertical)
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        
+                        TabBarButton(buttonType: .home)
+                        
+                        Spacer()
+                        
+                        TabBarButton(buttonType: .premium)
+                        
+                        Spacer()
+                        
+                        TabBarButton(buttonType: .messages)
+                        
+                        Spacer()
+                        
+                        TabBarButton(buttonType: .profile)
+                        
+                        Spacer()
+                    }
+                    .frame(height: 100)
+                    .padding(.top, 30)
                     
-                    TabBarButton(buttonType: .home)
-                    
-                    Spacer()
-                    
-                    TabBarButton(buttonType: .premium)
-                    
-                    Spacer()
-                    
-                    TabBarButton(buttonType: .messages)
-                    
-                    Spacer()
-                    
-                    TabBarButton(buttonType: .profile)
+                    presentViewForState()
                     
                     Spacer()
                 }
-                .frame(height: 100)
-                .padding(.top, 30)
-                
-                presentViewForState()
-                
-                Spacer()
+                .edgesIgnoringSafeArea(.vertical)
             }
-            .edgesIgnoringSafeArea(.vertical)
+            .modifier(HideNavigationView())
         }
     }
 }

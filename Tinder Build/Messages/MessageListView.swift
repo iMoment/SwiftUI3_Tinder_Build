@@ -17,6 +17,7 @@ struct MessageListView: View {
             VStack {
                 HStack {
                     TextField("Search Matches", text: $searchText)
+                        .disableAutocorrection(true)
                         .padding(7)
                         .padding(.horizontal, 25)
                         .background(Color.textFieldBackground)
@@ -32,10 +33,10 @@ struct MessageListView: View {
                             }
                         )
                         .padding(.horizontal, 10)
+                        .animation(.easeIn(duration: 0.25), value: isEditing)
                         .onTapGesture(perform: {
                             self.isEditing = true
                         })
-                        .animation(.easeIn(duration: 0.25))
                     
                     if isEditing {
                         Button(action: {
@@ -46,22 +47,31 @@ struct MessageListView: View {
                             Text("Cancel")
                         })
                         .padding(.trailing, 10)
-                        .transition(.move(edge: .trailing))
                         .animation(.easeIn(duration: 0.25))
+                        .transition(.move(edge: .trailing))
                     }
                 }
                 
                 Spacer()
                     .frame(height: 14)
                 
-                VStack {
-                    ForEach(vm.messageThreads, id: \.self) { thread in
-                        NavigationLink(
-                            destination: ChatView(person: thread.person),
-                            label: {
-                                MessageRow(messageThread: thread)
-                            })
-                            .buttonStyle(PlainButtonStyle())
+                ZStack {
+                    VStack {
+                        ForEach(vm.messageThreads.filter({ searchText.isEmpty ? true : displayThread($0) }), id: \.self) { thread in
+                            
+                            NavigationLink(
+                                destination: ChatView(person: thread.person),
+                                label: {
+                                    MessageRow(messageThread: thread)
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                                .animation(.easeIn(duration: 0.25), value: searchText)
+                                .transition(.slide)
+                        }
+                    }
+                    
+                    if isEditing && searchText.isEmpty {
+                        Color.white.opacity(0.5)
                     }
                 }
                 
@@ -69,6 +79,17 @@ struct MessageListView: View {
             }
         }
         .modifier(HideNavigationView())
+    }
+    
+    func displayThread(_ thread: MessageThread) -> Bool {
+        // Person name
+        if thread.person.name.contains(searchText) { return true }
+        // Last message sent
+        if thread.lastMessage.contains(searchText) { return true }
+        // Person bio
+        if thread.person.bio.contains(searchText) { return true }
+        
+        return false
     }
 }
 

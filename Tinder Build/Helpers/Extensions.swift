@@ -27,12 +27,12 @@ extension Color {
 
 extension View {
     func endEditing(_ force: Bool) {
-        UIApplication.shared.windows.forEach { $0.endEditing(force) }
+//        UIApplication.shared.windows.forEach { $0.endEditing(force) }
         
 //        // iOS 15
-//        let scenes = UIApplication.shared.connectedScenes
-//        let windowScene = scenes.first as? UIWindowScene
-//        windowScene?.windows.forEach { $0.endEditing(force) }
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        windowScene?.windows.forEach { $0.endEditing(force) }
     }
 }
 
