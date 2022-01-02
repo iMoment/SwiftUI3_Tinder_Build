@@ -13,6 +13,9 @@
 		91A603BD277F54CC00B41F27 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BC277F54CC00B41F27 /* ChatManager.swift */; };
 		91A603BF277F584900B41F27 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BE277F584900B41F27 /* ChatViewHeader.swift */; };
 		91BA7D302780B13300EC3901 /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BA7D2F2780B13300EC3901 /* MessageRow.swift */; };
+		91C3B80F2782068B00521FAE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B80E2782068B00521FAE /* UserManager.swift */; };
+		91C3B811278206CA00521FAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B810278206CA00521FAE /* User.swift */; };
+		91C3B8142782082000521FAE /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B8132782082000521FAE /* LikesView.swift */; };
 		91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37517277E46B9006C970F /* Tinder_BuildApp.swift */; };
 		91F3751A277E46B9006C970F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37519277E46B9006C970F /* ContentView.swift */; };
 		91F3751C277E46BA006C970F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3751B277E46BA006C970F /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		91A603BC277F54CC00B41F27 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		91A603BE277F584900B41F27 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
 		91BA7D2F2780B13300EC3901 /* MessageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
+		91C3B80E2782068B00521FAE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		91C3B810278206CA00521FAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		91C3B8132782082000521FAE /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
 		91F37514277E46B9006C970F /* Tinder Build.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder Build.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F37517277E46B9006C970F /* Tinder_BuildApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tinder_BuildApp.swift; sourceTree = "<group>"; };
 		91F37519277E46B9006C970F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91C3B812278207FC00521FAE /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				91C3B8132782082000521FAE /* LikesView.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
 		91F3750B277E46B9006C970F = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +103,11 @@
 			children = (
 				91F37517277E46B9006C970F /* Tinder_BuildApp.swift */,
 				91F37529277E4D51006C970F /* AppStateManager.swift */,
+				91C3B80E2782068B00521FAE /* UserManager.swift */,
 				91F37519277E46B9006C970F /* ContentView.swift */,
 				91F3752F277E58F0006C970F /* Model */,
 				91F37530277E5909006C970F /* Home */,
+				91C3B812278207FC00521FAE /* Matches */,
 				91F3753B277E7634006C970F /* Messages */,
 				91F37531277E5C58006C970F /* Profile */,
 				91F3752E277E53BC006C970F /* Components */,
@@ -133,6 +149,7 @@
 				91F3753E277E776F006C970F /* Person.swift */,
 				91F3753C277E76AA006C970F /* Message.swift */,
 				91F37540277E7D36006C970F /* MessageThread.swift */,
+				91C3B810278206CA00521FAE /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,8 +278,11 @@
 				91F3753D277E76AA006C970F /* Message.swift in Sources */,
 				91F37533277E5C6B006C970F /* ProfileView.swift in Sources */,
 				91F3752A277E4D51006C970F /* AppStateManager.swift in Sources */,
+				91C3B8142782082000521FAE /* LikesView.swift in Sources */,
 				91BA7D302780B13300EC3901 /* MessageRow.swift in Sources */,
+				91C3B80F2782068B00521FAE /* UserManager.swift in Sources */,
 				91F37541277E7D36006C970F /* MessageThread.swift in Sources */,
+				91C3B811278206CA00521FAE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

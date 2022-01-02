@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var appManager: AppStateManager = AppStateManager()
+    @ObservedObject var userManager: UserManager = UserManager()
     
     var body: some View {
         MainView()
             .environmentObject(appManager)
+            .environmentObject(userManager)
     }
 }
 
