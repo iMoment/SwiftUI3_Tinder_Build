@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9109952F277FC8E000CC1F80 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109952E277FC8E000CC1F80 /* MessageListView.swift */; };
 		91099531277FC90B00CC1F80 /* MessageListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91099530277FC90B00CC1F80 /* MessageListVM.swift */; };
+		9171174F27838DA70073C1F2 /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171174E27838DA70073C1F2 /* PurchasePopup.swift */; };
 		91A603BB277F548200B41F27 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BA277F548200B41F27 /* ChatView.swift */; };
 		91A603BD277F54CC00B41F27 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BC277F54CC00B41F27 /* ChatManager.swift */; };
 		91A603BF277F584900B41F27 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A603BE277F584900B41F27 /* ChatViewHeader.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		9109952E277FC8E000CC1F80 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		91099530277FC90B00CC1F80 /* MessageListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVM.swift; sourceTree = "<group>"; };
+		9171174E27838DA70073C1F2 /* PurchasePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePopup.swift; sourceTree = "<group>"; };
 		91A603BA277F548200B41F27 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		91A603BC277F54CC00B41F27 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		91A603BE277F584900B41F27 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9171174D27838D6D0073C1F2 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				9171174E27838DA70073C1F2 /* PurchasePopup.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
 		91C3B812278207FC00521FAE /* Matches */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				91C3B812278207FC00521FAE /* Matches */,
 				91F3753B277E7634006C970F /* Messages */,
 				91F37531277E5C58006C970F /* Profile */,
+				9171174D27838D6D0073C1F2 /* Purchase */,
 				91F3752E277E53BC006C970F /* Components */,
 				91F3752D277E53A4006C970F /* Helpers */,
 				91F3751B277E46BA006C970F /* Assets.xcassets */,
@@ -275,6 +286,7 @@
 				9109952F277FC8E000CC1F80 /* MessageListView.swift in Sources */,
 				91F3751A277E46B9006C970F /* ContentView.swift in Sources */,
 				91F37535277E5DCE006C970F /* RoundedImage.swift in Sources */,
+				9171174F27838DA70073C1F2 /* PurchasePopup.swift in Sources */,
 				91A603BF277F584900B41F27 /* ChatViewHeader.swift in Sources */,
 				91C3B81A27822ECD00521FAE /* MatchesView.swift in Sources */,
 				91F3752C277E515E006C970F /* Extensions.swift in Sources */,
