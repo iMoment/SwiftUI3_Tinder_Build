@@ -16,7 +16,7 @@ struct MainView: View {
             let view = Text("Home View")
             return AnyView(view)
         case .premium:
-            let view = Text("Premium View")
+            let view = MatchesView()
             return AnyView(view)
         case .messages:
             let view = MessageListView()
@@ -72,5 +72,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(AppStateManager())
+            .environmentObject(UserManager())
     }
 }
