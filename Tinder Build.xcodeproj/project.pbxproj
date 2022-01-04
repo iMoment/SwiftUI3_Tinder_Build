@@ -24,6 +24,7 @@
 		91C3B81627820B2500521FAE /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B81527820B2500521FAE /* PersonCard.swift */; };
 		91C3B81827822E2400521FAE /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B81727822E2400521FAE /* TopPicksView.swift */; };
 		91C3B81A27822ECD00521FAE /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B81927822ECD00521FAE /* MatchesView.swift */; };
+		91D3B0CE2784E50A0088773B /* CardImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3B0CD2784E50A0088773B /* CardImageScroller.swift */; };
 		91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37517277E46B9006C970F /* Tinder_BuildApp.swift */; };
 		91F3751A277E46B9006C970F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F37519277E46B9006C970F /* ContentView.swift */; };
 		91F3751C277E46BA006C970F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3751B277E46BA006C970F /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		91C3B81527820B2500521FAE /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
 		91C3B81727822E2400521FAE /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
 		91C3B81927822ECD00521FAE /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		91D3B0CD2784E50A0088773B /* CardImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageScroller.swift; sourceTree = "<group>"; };
 		91F37514277E46B9006C970F /* Tinder Build.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder Build.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F37517277E46B9006C970F /* Tinder_BuildApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tinder_BuildApp.swift; sourceTree = "<group>"; };
 		91F37519277E46B9006C970F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 				91C3B81527820B2500521FAE /* PersonCard.swift */,
 			);
 			path = Matches;
+			sourceTree = "<group>";
+		};
+		91D3B0CF2784E5100088773B /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				91D3B0CD2784E50A0088773B /* CardImageScroller.swift */,
+			);
+			path = CardViews;
 			sourceTree = "<group>";
 		};
 		91F3750B277E46B9006C970F = {
@@ -190,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				91F37525277E4851006C970F /* MainView.swift */,
+				91D3B0CF2784E5100088773B /* CardViews */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -313,6 +324,7 @@
 				91F37526277E4851006C970F /* MainView.swift in Sources */,
 				91F37518277E46B9006C970F /* Tinder_BuildApp.swift in Sources */,
 				91F3753D277E76AA006C970F /* Message.swift in Sources */,
+				91D3B0CE2784E50A0088773B /* CardImageScroller.swift in Sources */,
 				917117532783A14C0073C1F2 /* PurchaseOptionView.swift in Sources */,
 				91F37533277E5C6B006C970F /* ProfileView.swift in Sources */,
 				9171175127839D4C0073C1F2 /* PurchaseSwipePromo.swift in Sources */,
