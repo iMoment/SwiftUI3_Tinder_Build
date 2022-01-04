@@ -13,6 +13,9 @@ struct Person: Hashable, Identifiable {
     var name: String
     var imageURLS: [URL]
     var bio: String
+    var distance: Int
+    
+    var fullBiography: String
     
     var age: Int
     
@@ -32,30 +35,40 @@ extension Person {
             URL(string: "https://picsum.photos/400/303")!
         ],
         bio: "This is my bio. I want to let you know that I'm a very cool guy, and that I'm really popular among my friends. I have 2 friends.",
+        distance: 20,
+        fullBiography: "This is my bio. I want to let you know that I'm a very cool guy, and that I'm really popular among my friends. I have 2 friends.",
         age: 21
     )
     static let example2 = Person(
         name: "Gihwan",
         imageURLS: [URL(string: "https://picsum.photos/400/301")!],
         bio: "I really love pizza.",
+        distance: 25,
+        fullBiography: "I really love pizza.",
         age: 25
     )
     static let example3 = Person(
         name: "MK",
         imageURLS: [URL(string: "https://picsum.photos/400/302")!],
         bio: "I need to drink soju everyday.",
+        distance: 30,
+        fullBiography: "I need to drink soju everyday.",
         age: 28
     )
     static let example4 = Person(
         name: "ByungYoon",
         imageURLS: [URL(string: "https://picsum.photos/400/303")!],
         bio: "Playing video games is more important than you.",
+        distance: 35,
+        fullBiography: "Playing video games is more important than you.",
         age: 30
     )
     static let example5 = Person(
         name: "Sarah",
         imageURLS: [URL(string: "https://picsum.photos/400/304")!],
         bio: "Hi, I attend Hongik University located in Mapo-gu",
+        distance: 40,
+        fullBiography: "Hi, I attend Hongik University located in Mapo-gu",
         age: 23
     )
     
