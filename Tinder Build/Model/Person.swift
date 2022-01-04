@@ -5,7 +5,7 @@
 //  Created by Stanley Pan on 2021/12/30.
 //
 
-import Foundation
+import SwiftUI
 
 struct Person: Hashable, Identifiable {
     let id = UUID().uuidString
@@ -15,6 +15,11 @@ struct Person: Hashable, Identifiable {
     var bio: String
     
     var age: Int
+    
+    // MARK: For swiping / card offset manipulation
+    var xPosition: CGFloat = 0.0
+    var yPosition: CGFloat = 0.0
+    var degree: Double = 0.0
 }
 
 extension Person {
