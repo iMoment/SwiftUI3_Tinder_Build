@@ -41,7 +41,12 @@ extension Person {
     )
     static let example2 = Person(
         name: "Gihwan",
-        imageURLS: [URL(string: "https://picsum.photos/400/301")!],
+        imageURLS: [
+            URL(string: "https://picsum.photos/400/304")!,
+            URL(string: "https://picsum.photos/400/305")!,
+            URL(string: "https://picsum.photos/400/306")!,
+            URL(string: "https://picsum.photos/400/307")!
+        ],
         bio: "I really love pizza.",
         distance: 25,
         fullBiography: "I really love pizza.",
@@ -49,7 +54,12 @@ extension Person {
     )
     static let example3 = Person(
         name: "MK",
-        imageURLS: [URL(string: "https://picsum.photos/400/302")!],
+        imageURLS: [
+            URL(string: "https://picsum.photos/401/300")!,
+            URL(string: "https://picsum.photos/402/300")!,
+            URL(string: "https://picsum.photos/403/300")!,
+            URL(string: "https://picsum.photos/404/300")!
+        ],
         bio: "I need to drink soju everyday.",
         distance: 30,
         fullBiography: "I need to drink soju everyday.",
@@ -57,7 +67,12 @@ extension Person {
     )
     static let example4 = Person(
         name: "ByungYoon",
-        imageURLS: [URL(string: "https://picsum.photos/400/303")!],
+        imageURLS: [
+            URL(string: "https://picsum.photos/405/303")!,
+            URL(string: "https://picsum.photos/406/300")!,
+            URL(string: "https://picsum.photos/407/300")!,
+            URL(string: "https://picsum.photos/408/300")!
+        ],
         bio: "Playing video games is more important than you.",
         distance: 35,
         fullBiography: "Playing video games is more important than you.",
@@ -65,7 +80,12 @@ extension Person {
     )
     static let example5 = Person(
         name: "Sarah",
-        imageURLS: [URL(string: "https://picsum.photos/400/304")!],
+        imageURLS: [
+            URL(string: "https://picsum.photos/405/301")!,
+            URL(string: "https://picsum.photos/406/301")!,
+            URL(string: "https://picsum.photos/407/301")!,
+            URL(string: "https://picsum.photos/408/301")!
+        ],
         bio: "Hi, I attend Hongik University located in Mapo-gu",
         distance: 40,
         fullBiography: "Hi, I attend Hongik University located in Mapo-gu",
