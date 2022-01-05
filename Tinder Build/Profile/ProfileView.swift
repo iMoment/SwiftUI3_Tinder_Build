@@ -77,12 +77,12 @@ struct ProfileView: View {
                 .padding()
                 .background(Color.pink)
                 .cornerRadius(12)
-            .padding(.horizontal, 8)
+                .padding(.horizontal, 8)
             }
             
             if !user.isGoldSubscriber {
                 ZStack {
-                    Color.gray.opacity(0.14)
+                    Color.gray.opacity(0.15)
                     
                     ProfilePromo {
                         appManager.showPurchaseScreen()

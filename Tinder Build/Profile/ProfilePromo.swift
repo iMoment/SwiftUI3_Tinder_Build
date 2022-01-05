@@ -65,6 +65,7 @@ struct ProfilePromo_Previews: PreviewProvider {
         ZStack {
             Color.gray.opacity(0.2)
                 .edgesIgnoringSafeArea(.all)
+            
             ProfilePromo {
                 print("My Tinder Plus button pressed.")
             }

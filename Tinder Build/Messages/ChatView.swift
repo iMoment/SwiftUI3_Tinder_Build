@@ -28,7 +28,7 @@ struct ChatView: View {
                     ScrollViewReader { proxy in
                         
                         LazyVStack {
-                            ForEach(chatManager.messages.indices) { messageIndex in
+                            ForEach(chatManager.messages.indices, id: \.self) { messageIndex in
                                 let message = chatManager.messages[messageIndex]
                                 withAnimation(Animation.easeIn) {
                                     MessageBubble(message: message)

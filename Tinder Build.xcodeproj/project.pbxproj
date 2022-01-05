@@ -154,9 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				91F37517277E46B9006C970F /* Tinder_BuildApp.swift */,
-				91F37529277E4D51006C970F /* AppStateManager.swift */,
-				91C3B80E2782068B00521FAE /* UserManager.swift */,
 				91F37519277E46B9006C970F /* ContentView.swift */,
+				91F37525277E4851006C970F /* MainView.swift */,
+				91F573982786262100638AF5 /* Managers */,
 				91F3752F277E58F0006C970F /* Model */,
 				91F37530277E5909006C970F /* Home */,
 				91C3B812278207FC00521FAE /* Matches */,
@@ -213,7 +213,6 @@
 		91F37530277E5909006C970F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				91F37525277E4851006C970F /* MainView.swift */,
 				9163BC162786136900DE8CD4 /* HomeView.swift */,
 				91D3B0CF2784E5100088773B /* CardViews */,
 			);
@@ -241,6 +240,15 @@
 				91BA7D2F2780B13300EC3901 /* MessageRow.swift */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		91F573982786262100638AF5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				91C3B80E2782068B00521FAE /* UserManager.swift */,
+				91F37529277E4D51006C970F /* AppStateManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -42,7 +42,7 @@ struct CardImageScroller: View {
                     
                     VStack {
                         HStack {
-                            Image("likeButton")
+                            Image("like")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150)
@@ -50,7 +50,7 @@ struct CardImageScroller: View {
                             
                             Spacer()
                             
-                            Image("nopeButton")
+                            Image("nope")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150)
