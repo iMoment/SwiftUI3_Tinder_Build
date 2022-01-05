@@ -70,7 +70,6 @@ struct CardView: View {
                                         if let person = userManager.personCardStack.last {
                                             userManager.swipe(person, .reject)
                                         }
-//                                        userManager.swipe(person, .reject)
                                     }
                                 }
                             })

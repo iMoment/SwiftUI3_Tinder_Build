@@ -142,8 +142,9 @@ struct FullScreenCardView: View {
         let items: [Any] = ["What do you think about \(person.name)? \n"]
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
         
-        // TODO: Convert to conform to iOS 15
-        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        windowScene?.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
     }
 }
 
