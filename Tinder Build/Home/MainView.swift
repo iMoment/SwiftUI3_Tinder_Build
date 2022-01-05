@@ -13,7 +13,7 @@ struct MainView: View {
     func presentViewForState() -> some View {
         switch appManager.selectedTab {
         case .home:
-            let view = Text("Home View")
+            let view = HomeView()
             return AnyView(view)
         case .premium:
             let view = MatchesView()
