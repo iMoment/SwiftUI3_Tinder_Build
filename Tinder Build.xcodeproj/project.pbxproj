@@ -126,10 +126,10 @@
 		91D3B0CF2784E5100088773B /* CardViews */ = {
 			isa = PBXGroup;
 			children = (
-				91D3B0CD2784E50A0088773B /* CardImageScroller.swift */,
+				9163BC142786123000DE8CD4 /* CardStack.swift */,
 				91D3B0D02784FA220088773B /* CardView.swift */,
 				91D3B0D2278508510088773B /* FullScreenCardView.swift */,
-				9163BC142786123000DE8CD4 /* CardStack.swift */,
+				91D3B0CD2784E50A0088773B /* CardImageScroller.swift */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";

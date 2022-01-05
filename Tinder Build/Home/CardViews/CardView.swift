@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     @State var person: Person
     @Binding var inFullScreenMode: Bool
+    @EnvironmentObject var userManager: UserManager
     
     let screenCutoff = (UIScreen.main.bounds.width / 2) * 0.8
     
@@ -59,10 +60,17 @@ struct CardView: View {
                                         // Swipe right
                                         person.xPosition = 500
                                         person.degree = 12
+                                        if let person = userManager.personCardStack.last {
+                                            userManager.swipe(person, .like)
+                                        }
                                     } else if width < -screenCutoff {
                                         // Swipe left
                                         person.xPosition = -500
                                         person.degree = -12
+                                        if let person = userManager.personCardStack.last {
+                                            userManager.swipe(person, .reject)
+                                        }
+//                                        userManager.swipe(person, .reject)
                                     }
                                 }
                             })
@@ -74,6 +82,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(person: Person.example, inFullScreenMode: .constant(true))
+        CardView(person: Person.example, inFullScreenMode: .constant(false))
+            .environmentObject(UserManager())
     }
 }
