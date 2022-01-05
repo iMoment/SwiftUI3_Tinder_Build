@@ -10,8 +10,11 @@ import SwiftUI
 struct FullScreenCardView: View {
     var person: Person
     @Binding var inFullScreenMode: Bool
+    @EnvironmentObject var userManager: UserManager
     
     let screen = UIScreen.main.bounds
+    
+    
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -41,7 +44,7 @@ struct FullScreenCardView: View {
                         }
                         .padding([.horizontal, .top], 16)
                         
-                        Button(action: { }, label: {
+                        Button(action: { inFullScreenMode = false }, label: {
                             Image(systemName: "arrow.down.circle.fill")
                                 .font(.system(size: 42))
                                 .background(Color.white)
@@ -70,7 +73,7 @@ struct FullScreenCardView: View {
                         .frame(height: 32)
                     
                     VStack(spacing: 24) {
-                        Button(action: { }, label: {
+                        Button(action: { showActionSheet() }, label: {
                             VStack(spacing: 8) {
                                 Text("SHARE \(person.name.uppercased())'S PROFILE")
                                     .font(.system(size: 16, weight: .medium))
@@ -94,13 +97,55 @@ struct FullScreenCardView: View {
                 }
             }
             
-            Text("BUTTON ARRAY")
+            HStack(spacing: 20) {
+                Spacer()
+                
+                CircleButtonView(buttonType: .no) {
+                    inFullScreenMode = false
+                    userManager.swipe(person, .reject)
+                }
+                .frame(height: 50)
+                
+                CircleButtonView(buttonType: .star) {
+                    inFullScreenMode = false
+                    userManager.superLike(person)
+                }
+                .frame(height: 45)
+                
+                CircleButtonView(buttonType: .heart) {
+                    inFullScreenMode = false
+                    userManager.swipe(person, .like)
+                }
+                .frame(height: 50)
+                
+                Spacer()
+            }
+            .padding(.top, 25)
+            .padding(.bottom, 45)
+            .edgesIgnoringSafeArea(.bottom)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.white.opacity(0.2), Color.white]),
+                    startPoint: .top,
+                    endPoint: .bottom)
+            )
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .padding(.top, 40)
+    }
+    
+    func showActionSheet() {
+        let items: [Any] = ["What do you think about \(person.name)? \n"]
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        // TODO: Convert to conform to iOS 15
+        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
     }
 }
 
 struct FullScreenCardView_Previews: PreviewProvider {
     static var previews: some View {
         FullScreenCardView(person: Person.example, inFullScreenMode: .constant(true))
+            .environmentObject(UserManager())
     }
 }
