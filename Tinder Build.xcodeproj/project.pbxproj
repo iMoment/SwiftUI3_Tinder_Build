@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9109952F277FC8E000CC1F80 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109952E277FC8E000CC1F80 /* MessageListView.swift */; };
 		91099531277FC90B00CC1F80 /* MessageListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91099530277FC90B00CC1F80 /* MessageListVM.swift */; };
+		9163BC152786123100DE8CD4 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163BC142786123000DE8CD4 /* CardStack.swift */; };
 		9171174F27838DA70073C1F2 /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171174E27838DA70073C1F2 /* PurchasePopup.swift */; };
 		9171175127839D4C0073C1F2 /* PurchaseSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171175027839D4C0073C1F2 /* PurchaseSwipePromo.swift */; };
 		917117532783A14C0073C1F2 /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917117522783A14C0073C1F2 /* PurchaseOptionView.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		9109952E277FC8E000CC1F80 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		91099530277FC90B00CC1F80 /* MessageListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVM.swift; sourceTree = "<group>"; };
+		9163BC142786123000DE8CD4 /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		9171174E27838DA70073C1F2 /* PurchasePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePopup.swift; sourceTree = "<group>"; };
 		9171175027839D4C0073C1F2 /* PurchaseSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSwipePromo.swift; sourceTree = "<group>"; };
 		917117522783A14C0073C1F2 /* PurchaseOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseOptionView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				91D3B0CD2784E50A0088773B /* CardImageScroller.swift */,
 				91D3B0D02784FA220088773B /* CardView.swift */,
 				91D3B0D2278508510088773B /* FullScreenCardView.swift */,
+				9163BC142786123000DE8CD4 /* CardStack.swift */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				91F37541277E7D36006C970F /* MessageThread.swift in Sources */,
 				91D3B0D12784FA220088773B /* CardView.swift in Sources */,
 				91C3B811278206CA00521FAE /* User.swift in Sources */,
+				9163BC152786123100DE8CD4 /* CardStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
